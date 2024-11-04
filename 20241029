@@ -1,0 +1,51 @@
+
+* web1.0 방식
+ejs : html data 묶어서 내리기  
+client(브라우저) -> 요청 -> node.js(express.js) : server
+
+* web3.0방식
+react & restful api 
+client -> 요청 -> server area ( React : localhost3000 / Express localhost3001 )
+client가 요청하면 서버react에서 react-script를 내려주면
+client 는 react component가 내려가고 data는 react component(fetch, axios)가
+서버 expressd에서 db에서 데이터를 가져와 react component에 전달
+react component와 express가 통신하는 방식이 Restful API/graph-ql
+
+* GrphQL
+1. RESTful API 
+- app.get
+- app.post
+- app.put
+- app.delete
+
+2. GraphQL : facebook 만든거
+- app('/graphql') : 라우터 하나
+요청구문 { posts { title, content } }
+스키마 : 요청하는 데이터 타입 (목록, 상세보기, 글쓰기, 글삭제)
+리졸버 : 실제수행로직(목록변환, 상세보기 반환, 글쓰기 결과 반환)
+-> 한번의 요청으로 여러개를 반환받을 수 있다.
+-> 필요한 데이터만 반환 받을 수 있다.
+
+
+ch06_03폴더 생성
+> npm init -y
+> npm i express better-sqlite3 graphql express-graphql nodemon  
+--> 5개 설치
+    "better-sqlite3": "^11.5.0",
+    "express": "^4.21.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.9.0",
+    "nodemon": "^3.1.7"
+
+graphql을 react에서 사용시는 react graphql client : apollo 를 찾아서 사용
+--> https://www.apollographql.com/docs/react/get-started
+--> 옵셔널
+
+npx nodemon app.js 로 실행
+http://localhost:4000/graphql
+
+npx nodemon api.js 로 실행
+
+graphql은 get/post만 있고 create시는 반드시 POST여야하고 select시도 post를 써도 된다.
+
+
