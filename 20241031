@@ -1,0 +1,127 @@
+azure : https://bit.ly/3YKjqO8
+
+클라우드 네이티브하다 : PaaS
+
+NoSQL : not only sql
+Azure OpenAI 는 RESTful API로 구현
+
+android폰 : ms authenticator
+
+[ Azure portal ] 
+
+1. 가입완료 : bsmj.100@gmail.com 계정으로 생성
+2. 로그인
+--> https://portal.azure.com/
+3. 리소스그룹 설정
+--> 서비스 : azure제공용, marketplace : 내가 만든 리소스그룹을 파는곳
+--> 만들기
+--> 구독
+--> 리소스 그룹 : rg-xxx 
+--> 영역 : 권장지역선택  // korea central 또는 east usa
+--> 태그 : nambu
+--> 검토+만들기
+--> PaaS의 경우 url이름으로 해야하므로 유효성검사가 필요
+4. 가상머신
+--> 만들기
+--> 리소스그룹 : 3번에서 만든거 선택
+--> 가상머신이름 : hellovm
+--> 가용성옵션 : 인프라 중복 필요없음... // 비용추가됨
+--> 보안유형
+--> 이미지 : window 11 Pro, version 23H2 - x64 Gen2
+--> Azure Spot 할인으로 실행 : 저렴하나 사용도중 꺼질 수 있음
+     backup이 항상 되어 있어야함.
+--> 크기 : 비용은 리전에 따라 월 사용비용이 달라짐
+--> 관리자계정 사용자 이름(window 계정) : bsmj.100
+--> 암호 : Nambu1234!!!
+--> 인바운드 포트 규칙(방화벽) : 선택한 포트 허용  // 없음 - 외부에서 못들어감
+     아웃바운드 : 외부로 나가는거
+--> 인바운드 포트 선택 : RDP(3389) 선택
+     http, https : 웹서비스
+     ssh : 리눅스
+     rdp : remote desktop protocol
+
+4-1. 네트워크
+--> 기본적으로 네트워크, ip를 만들어준다.
+--> 검토+만들기
+
+--> 리소스그룹은 라이프타임이 같은것 끼리 묶는다.
+
+* portal 사용법 익히기 : https://portal.azure.com/
+
+rg-Sample > hellovm 연결 > RDP파일 다운로드
+
+Entra > 계정비용발생으로 다음에
+
+NetworkWatcherRG : 만들어지면 그냥 둘것
+IP Address : 인터넷접속하기 위한 주소
+--> 2**32개
+--> 8비트 : 0 부터 255까지
+--> 8비트 4개 : 32bit
+--> IPv4 : 32bit, IPv6 : 128bit
+--> 사설 A class : 2**24
+--> 사설 B class : 2**16
+--> 사설 C class : 2**8
+
+
+
+공용IP주소 만들기
+- 이름 : pip-hello   // pip-xxxx (pip : public ip)
+- 가용성 영역 : No Zone
+- 유효성검사+만들기 -> 만들기 -> 배포성공 : 172.190.166.81
+
+from리소스그룹에서 to리소스그룹으로 이동
+pip-hello : 이동
+
+
+Azure OpenAI
+- chat gpt
+- dali
+Computer Vision
+- 이미지 테그 붙이기
+Face API 
+- 얼굴인식 : ms 신청 허가후 사용
+- 얼굴구분
+Custom Vision
+- FineTuning
+음성서비스 : TTS
+- 음성 -> 문자
+- 문자 -> 음성
+언어서비스
+- 텍스트에서 핵심키워드 추출등
+번역기
+- 번역
+Document intelligence
+- OCR과 달리 영수증에서 가격의 의미 등 추출
+봇 서비스
+- 고객상담
+Anomaly Detector
+- 이상치 감시 : 기존패턴과 다른 경우 체크해서 알림
+Content Moderator
+- 게시판 : 욕설등 체크
+Health Insights
+Personalizer
+Metrics Advisor
+QnA maker
+- 봇서비스와 비슷하지만 
+
+Restful API로 동작
+
+bit.ly/40p9A5d
+api-version : 3.0
+to en
+Ocp-Apim-Subscription-Key
+Ocp-Apim-Subscription-Region
+
+
+* 피그마 : 이다영
+- 화면기획 사이트
+- 가입
+https://www.figma.com/
+키워드 : wireframe - 화면기획
+           landingpage - 
+           button(버튼)
+http://bit.ly/4e4zkqN : 다영님 피그마
+
+drawsql : db table그리기 -> sql export
+
+
