@@ -1,0 +1,73 @@
+git bash > download
+
+github.com > 레파지토리생성 : mynodejs(ignore : node선택) > code - https 복사
+
+https://github.com/WhiteSnow100/mynodejs.git 
+
+git bash에서..tutorial 폴더에서 git clone https://github.com/WhiteSnow100/mynodejs.git  진행
+
+tutorial 폴더에 mynodejs 폴더 생성됨
+tutorial의 nodejs폴더의 01 ~ 06폴더를 mynodejs폴더로 모두 복사
+
+vscode > mynodejs 폴더선택 > 왼쪽메뉴 
+
+수정건수 클릭하여 commit
+-> commit할때 user.name, user.email 나오면 
+-> termial 열고 > git bash선택
+git config --global user.name "WhiteSnow100"
+git config --global user.email "bsmj.100@gmail.com"
+-> commit / sync changes
+-> pull ? [ ok ]
+
+git push -f  : 강제 모두 push
+git add test2.js : test2.js파일만 add 전체일 경우는 test2.js 대신 .
+git commit -m "add test2.js" : add한걸 commit
+git push origin main : commit한걸 github로 push
+
+github의 신규파일 만들기
+git pull
+
+
+ORM : Object-Relational Mapping 약자
+
+ch08>ch08_01 폴더 생성
+npm init -y
+npm i sequelize sqlite3
+
+app.js 파일 만들기
+
+자바스크립트 내장 객체 : https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects
+
+
+ch08>ch08_02 폴더 생성
+npm init -y
+npm i express nodemon sequelize sequelize-cli sqlite3
+--> package.json에 아래 구문 추가
+  "dependencies": {
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7",
+    "sequelize": "^6.37.5",
+    "sequelize-cli": "^6.6.2",
+    "sqlite3": "^5.1.7"
+  }
+--> sequelize-cli : cli Command Line Interface
+npx sequelize-cli init  
+--> config, migration 등 디렉토리 생성
+--> config>config.json : development 내용 수정
+"development": {
+    "dialect": "sqlite",
+    "storage": "post.db"
+  },
+  --> seeders : 더미데이터
+
+ch08>ch08_02>models>post.js 생성
+
+ch08>ch08_02>app.js 생성후 코딩
+
+app.js 작성후 npx nodemon app.js 으로 실행
+
+
+
+
+
+
