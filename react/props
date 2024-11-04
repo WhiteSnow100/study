@@ -1,0 +1,36 @@
+20241104 
+
+* 특징
+- props : prop의 복수형으로 property의 줄일말
+- 리액트 컴포넌트의 속성
+- 읽기 전용 속성
+- 단방향 데이터 흐름 : (부모)컴포넌트에서 (자식)컴포넌트로 전달
+- 화살표 함수형에서 () 대신 props 써줌
+
+* 사용방법
+function Header(props) {
+    console.log('props', props, props.title)
+    return <header>
+        <h1><a href="/">{props.title}</a></h1>
+    </header>    
+}
+// props : 객체형으로 title: "WEB" 이 Header에 전달되고  props.title에는 WEB 이라는 텍스트가 전달된다.
+
+function Article(props) {
+    return <article>
+    <h2>{props.title}</h2>
+    {props.body}
+    </article>
+}
+// title : welcom, body : Hello, WEB
+// title : Hi, body : Hello, React
+
+function App() {
+    return {
+        <div>
+        <Header title="WEB"></Header>  // web
+        <Article title="welcome" body="Hello, WEB"></Article>  // welcome, Hello, WEB
+        <Article title="Hi" body="Hello, React"></Article>  // Hi, Hello, React
+        </div>
+    };
+}
