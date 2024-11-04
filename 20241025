@@ -1,0 +1,61 @@
+04>
+1. 04번 폴더
+2. 테미널 열기 
+3. npm  init -y : -y는 모두 yes처리
+--> package.json 파일을 만들어 준다
+4. npm i express 
+--> express 설치 : 버젼 번호가 없으면 최신버젼으로 install 한다
+--> 노드는 프로젝트별로 express 를 설치해야 한다. : 단점
+
+크롬 json formatter 설치하면 json형태 확인가능
+
+get : 서버에요청
+post : client가 server에 data 보낼때 post 요청으로 보냄
+delete : 
+
+5. npm i nodemon 
+--> nodemon install
+6. package.json에 "dev":"nodemon ch04_01.js", 구문을 scripts에 추가
+//npm run dev로 실행 또는 npx nodemon ch04_01.js 로 실행
+--> 이상태가 되면 ch04_01.js 파일을 수정하여 저장할때 마다 서버가 내려갔다 다시 올라오게 됨
+
+
+
+1. 템플릿엔진소개
+- Pug(구 Jade)
+- EJS
+2. Pug
+3. Handlebars
+4. EJS
+5. 공지사항 요구사항 및 UI설계
+6. 공지사항 개발
+
+다음주부터는 RESTful API 사용
+
+05>
+1. npm init -y  : 기본 팩키지 생성 - package.json 파일 생성됨
+2. npm i express nodemon ejs  : express, nodemon, ejs 추가
+3. app.js 파일 생성
+4. views 폴더 생성
+5. views>index.ejs 파일생성
+6. app.js에 코딩
+7. index.ejs 파일에는 html 구문으로 파일 작성
+8. 터미널에서 npx nodemon app.js로 실행
+9. views>sample.ejs 파일생성
+10. 게시판 생성
+- 게시판 리스트
+- 게시글 등록
+10-1. html 폴더 생성 
+10-2. html>list.html 파일 생성
+10-3. list.html 작성
+10-4. preview 검색후 Live Preview install
+10-5. list.html 파일 오른마우스 클릭후 Show Preview 로 list.html 확인
+10-6. simplecss 검색해서 option1의 minified version 복사해서 title아래에 붙혀넣기
+https://github.com/kevquirk/simple.css/wiki/Getting-Started-With-Simple.css
+
+11. post.js생성
+12. html>create.html을 복사해서 views아래에 넣고 .ejs 로 파일명 변경
+
+
+
+
