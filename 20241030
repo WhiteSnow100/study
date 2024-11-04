@@ -14,8 +14,7 @@ vscode > mynodejs 폴더선택 > 왼쪽메뉴
 수정건수 클릭하여 commit
 -> commit할때 user.name, user.email 나오면 
 -> termial 열고 > git bash선택
-git config --global user.name "WhiteSnow100"
-git config --global user.email "bsmj.100@gmail.com"
+
 -> commit / sync changes
 -> pull ? [ ok ]
 
