@@ -1,1 +1,113 @@
-작성중
+생성자 : 객체를 만들어내는 공장
+생성자 사용의 장점 : 하나의 생성자를 만들어 값을 다르게하여 여러 객체를 만들 수 있다
+
+* (사)정보시스템감리협회
+
+vscode 
+postman 앱설치
+
+
+await 사용시 async 방식으로
+
+multipart/form-data : 
+-> 데이터를 text와 이미지를 함께 보낼 수 있다.
+
+>ch08_02> npm i multer   
+--> multipart/form-data 사용하기 위해서 설치할것
+--> app.js에 
+
+sequelize-cli 로 마이그레이션 작성을 위해서 아래구문으로 미리 실행해야함
+npx sequelize-cli migration:generate --name add-filename-to-posts
+--> 파일생성 : 2024110423913-add-filename-to-posts 파일이 migration 폴더내에 생성됨
+--> 파일 async up : 마이그레이션 수행내용
+--> 파일 async down : 실패시 수행내용 작성
+
+2024110423913-add-filename-to-posts 파일이 생성되면 
+alter table의 경우 물리적으로 마이그레이션이 진행되나 논리적인 수정을 위해
+models내에서도 수정이 있어야 함. 
+
+npx sequelize-cli db:migrate 명령어로 마이그레이션 실행
+- post.db내에 SequelizeMeta 를 참조해서 SequelizeMeta 없는 migrations의 모든 마이그레이션을 실행하게됨
+한번 실행되면 SequelizeMeta 에 등록됨.
+
+- posts.db에 filename 칼럼 추가후
+- models/post.js에서 filename 내용 수정
+
+NoSQL : Not only SQL
+* 등장배경
+- 빅데이터의 등장
+- 비정형 데이터의 증가
+- 유연한 스키마
+- 분산 처리의 필요성
+
+NAS --> 쎈 --> 기존장비의 고가로 인해 [ 하둡등장 : 하둡분산파일시스템 ]
+: 하둡 맵/리듀스 탑재해서 대용량 데이터 분석 
+--> 아파치 HBase
+--> 아파치 Cassandra
+--> MongoDB
+--> 아마존 dynamodb 
+
+문서지향형 데이터베이스 - mongodb
+키-값 redis
+
+SQL / MongoDB
+Database / Database
+Table / Collection
+Row / JSON/BSON Documents
+Column / Field
+Index / Index
+Primary Key / Primary Key
+
+문서지향형 데이터 모델
+JSON과 유사한 BSON형식으로 데이터 저장
+스키마리스 구조
+수평확장성
+높은 성능
+풍부한 쿼리 언어 - 필터링, 정렬
+복제와 고가용성 - Replica Set
+
+<장점>
+유연한 데이터 모델
+
+<단점>
+일관성 문제
+메모리 사용
+복잡한 운영
+학습 곡선
+
+사용처
+콘텐츠 관리 시스템(CMS)
+
+https://www.mongodb.com/try/download/community-kubernetes-operator
+--> 몽고db download
+--> 몽고db 설치 > Compass 설치
+
+
+> localhost:27017에서 open mongdb shell 클릭
+-> test> db 
+    >
+-> use userdb 
+    userdb>
+--> show collections // table 있는지 보기
+--> db.createCollection("users")  // create table
+--> db.users.insertOne({name:"Alice", age:30, city:"Seoul"})  // one row insert
+--> 키가 자동생성됨
+--> db.users.find()  // select * from users
+--> db.users.insertMany // 여러건 insert
+--> db.users.find({name : "Alice" })   // where
+--> db.users.find({age : { $gt:20} }) // gt : grate then
+--> db.users.find({age : { $lt:20} }) // lt: less then
+--> db.users.updateOne({name: "Alice"}, {$set: {city:"Busan"}}) // 한건 변경
+--> db.users.updateMany()  // 여러건 변경
+--> db.users.deleteOne({name: "Alice"})
+
+09>ch09_02 폴더 생성
+npm i mongoose 
+app.js파일생성
+node app.js 로 실행
+
+
+09>ch09_03 폴더 생성
+npm init -y
+npm i express nodemon mongoose
+
